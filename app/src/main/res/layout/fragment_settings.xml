@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="197dp"
         android:layout_height="61dp"
-        android:text="Settings Fragment"
+        android:text="Fragment 2"
         android:textColor="@color/black"
         android:textFontWeight="@integer/material_motion_duration_medium_2"
         android:textSize="20sp" />

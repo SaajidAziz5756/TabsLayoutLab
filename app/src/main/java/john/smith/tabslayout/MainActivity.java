@@ -30,15 +30,8 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
-                    // Set custom titles for tabs
-                    switch (position) {
-                        case 0:
-                            tab.setText("Home");
-                            break;
-                        case 1:
-                            tab.setText("Settings");
-                            break;
-                    }
+                    // Customize the tab name based on position/index
+                    tab.setText("Tab " + (position + 1));
                 }
         ).attach();
     }
