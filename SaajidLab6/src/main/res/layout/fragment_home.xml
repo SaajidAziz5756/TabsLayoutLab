@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/SaajidTextView"
         android:layout_width="196dp"
         android:layout_height="61dp"
         android:layout_marginStart="124dp"
