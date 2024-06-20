@@ -76,6 +76,8 @@ public class HomeFragmentSaajid extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         RadioGroup rg = view.findViewById(R.id.SaajidradioGroup);
         Button btn = view.findViewById(R.id.SaajidSubmit);
+        rg.check(R.id.SaajidradioButton);
+
         btn.setOnClickListener(v -> {
 
             int selection = rg.getCheckedRadioButtonId();

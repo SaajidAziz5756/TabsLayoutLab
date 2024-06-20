@@ -13,4 +13,11 @@
     <string name="the_selected_color_is_no_data">The selected color is: NO DATA</string>
     <string name="the_chosen_color_is">"The chosen color is: "</string>
     <string name="the_chosen_color_is_no_data">The chosen color is: NO DATA</string>
+    <string name="hockey">Hockey</string>
+    <string name="basketball">Basketball</string>
+    <string name="baseball">Baseball</string>
+    <string name="sport">Sport</string>
+    <string name="no_sport">NO SPORT</string>
+    <string name="sports">Sports</string>
+    <string name="ok">OK</string>
 </resources>

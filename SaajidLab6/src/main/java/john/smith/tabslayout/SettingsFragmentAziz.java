@@ -1,6 +1,7 @@
 //Saajid Aziz   n01555756
 package john.smith.tabslayout;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,7 +12,10 @@ import androidx.fragment.app.FragmentResultListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,6 +72,10 @@ public class SettingsFragmentAziz extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         TextView txt = view.findViewById(R.id.SaajidCv);
+        CheckBox hock = view.findViewById(R.id.SaajidcheckBox);
+        CheckBox bask = view.findViewById(R.id.SaajidcheckBox2);
+        CheckBox base= view.findViewById(R.id.SaajidcheckBox3);
+        Button sprt = view.findViewById(R.id.Saajidbutton);
 
         getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
             @Override
@@ -100,6 +108,47 @@ public class SettingsFragmentAziz extends Fragment {
 
             }
         });
+
+
+
+        sprt.setOnClickListener(v ->
+
+
+
+                {
+                    StringBuilder check =new StringBuilder();
+
+                    if (hock.isChecked())
+                    {
+                        check.append(getString(R.string.hockey)).append("\n");
+
+                    }
+                    if (bask.isChecked())
+                    {
+                        check.append(getString(R.string.basketball)).append("\n");
+
+                    }
+                    if (base.isChecked())
+                    {
+                        check.append(getString(R.string.baseball)).append("\n");
+                    }
+                    if (check.length() < 1  )
+                        check.append(getString(R.string.no_sport));
+
+                    new AlertDialog.Builder(requireContext()).setIcon(R.mipmap.ic_launcher)
+                            .setTitle(getString(R.string.sports))
+                            .setMessage(check)
+                            .setPositiveButton(getString(R.string.ok), null)
+                            .show();
+
+                }
+
+
+                );
+
+
+
+
 
         return view;
 
