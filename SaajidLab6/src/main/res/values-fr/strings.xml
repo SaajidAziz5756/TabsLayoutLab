@@ -1,0 +1,23 @@
+<resources>
+    <!--  Saajid Aziz n01555756   -->
+    <string name="app_name">TabsLayout</string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="submit">Soumettre</string>
+    <string name="green">Vert</string>
+    <string name="yellow">Jaune</string>
+    <string name="red">Rouge</string>
+    <string name="other">Autre</string>
+    <string name="saajid_aziz">Saajid Aziz</string>
+    <string name="select_a_colour">Sélectionnez une couleur</string>
+    <string name="tab">Onglet </string>
+    <string name="the_selected_color_is_no_data">La couleur sélectionnée est : PAS DE DONNÉES</string>
+    <string name="the_chosen_color_is">La couleur choisie est : </string>
+    <string name="the_chosen_color_is_no_data">La couleur choisie est : PAS DE DONNÉES</string>
+    <string name="hockey">Hockey</string>
+    <string name="basketball">Basketball</string>
+    <string name="baseball">Baseball</string>
+    <string name="sport">Sport</string>
+    <string name="no_sport">PAS DE SPORT</string>
+    <string name="sports">Sports</string>
+    <string name="ok">OK</string>
+</resources>

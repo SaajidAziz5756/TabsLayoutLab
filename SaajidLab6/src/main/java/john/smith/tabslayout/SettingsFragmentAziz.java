@@ -135,7 +135,7 @@ public class SettingsFragmentAziz extends Fragment {
                     if (check.length() < 1  )
                         check.append(getString(R.string.no_sport));
 
-                    new AlertDialog.Builder(requireContext()).setIcon(R.mipmap.ic_launcher)
+                    new AlertDialog.Builder(requireContext()).setIcon(R.mipmap.buu_round)
                             .setTitle(getString(R.string.sports))
                             .setMessage(check)
                             .setPositiveButton(getString(R.string.ok), null)
