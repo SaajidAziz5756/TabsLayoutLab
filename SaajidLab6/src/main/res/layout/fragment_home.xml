@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/SaajidradioGroup"
         android:layout_width="256dp"
         android:layout_height="220dp"
         android:layout_marginStart="96dp"
@@ -18,31 +18,34 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/SaajidradioButton"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="55dp"
             android:text="@string/green"
             android:textColor="#3CB641" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/SaajidradioButton2"
             android:layout_width="match_parent"
-            android:layout_height="51dp"
+            android:layout_height="55dp"
             android:text="@string/yellow"
-            android:textColor="#F8E223" />
+            android:textColor="#F8E223"
+            android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/SaajidradioButton3"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:text="@string/red"
-            android:textColor="#BF0D00" />
+            android:textColor="#BF0D00"
+            android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/SaajidradioButton4"
             android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:text="@string/other" />
+            android:layout_height="55dp"
+            android:text="@string/other"
+            android:textStyle="bold" />
     </RadioGroup>
 
     <Button
@@ -54,7 +57,7 @@
         android:background="#006DC3"
         android:text="@string/submit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/SaajidradioGroup" />
 
     <View
         android:id="@+id/SaajidDiv"
@@ -65,7 +68,9 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="209dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        android:backgroundTint="#000000"
+        android:foregroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/SaajidradioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,4 +90,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SaajidtextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="58dp"
+        android:text="@string/select_a_colour"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SaajidradioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SaajidDiv" />
 </androidx.constraintlayout.widget.ConstraintLayout>

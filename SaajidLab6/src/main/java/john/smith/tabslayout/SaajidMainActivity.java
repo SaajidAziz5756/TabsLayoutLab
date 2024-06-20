@@ -30,7 +30,7 @@ public class SaajidMainActivity extends AppCompatActivity {
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
                     // Customize the tab name based on position/index
-                    tab.setText("Tab " + (position + 1));
+                    tab.setText((getString(R.string.tab)) + (position + 1));
                 }
         ).attach();
     }

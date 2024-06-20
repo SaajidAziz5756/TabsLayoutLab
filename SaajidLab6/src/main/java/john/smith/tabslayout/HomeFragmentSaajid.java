@@ -1,6 +1,7 @@
 //Saajid Aziz   N01555756
 package john.smith.tabslayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,13 +58,52 @@ public class HomeFragmentSaajid extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
+
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        RadioGroup rg = view.findViewById(R.id.SaajidradioGroup);
+        Button btn = view.findViewById(R.id.SaajidSubmit);
+        btn.setOnClickListener(v -> {
+
+            int selection = rg.getCheckedRadioButtonId();
+            RadioButton rb = view.findViewById(selection);
+            String color = rb.getText().toString();
+            createToast(color);
+//            Color clr = Color.valueOf(rb.getCurrentTextColor());
+
+            Bundle send = new Bundle();
+            send.putString("send", color);
+            getParentFragmentManager().setFragmentResult("key", send);
+
+
+        });
+
+
+
+
+
+        return view;
     }
+
+    private void createToast(String colour)
+    {
+        Toast.makeText(getActivity(), colour, Toast.LENGTH_LONG).show();
+
+        
+    }
+
+
 }

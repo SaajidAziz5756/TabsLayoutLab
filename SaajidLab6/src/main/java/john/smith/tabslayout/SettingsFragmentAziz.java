@@ -3,11 +3,15 @@ package john.smith.tabslayout;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,6 +57,8 @@ public class SettingsFragmentAziz extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
     }
 
@@ -60,6 +66,43 @@ public class SettingsFragmentAziz extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        TextView txt = view.findViewById(R.id.SaajidCv);
+
+        getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+
+                String setColor = result.getString("send");
+
+                String red = getString(R.string.red);
+                String green = getString(R.string.green);
+                String yellow = getString(R.string.yellow);
+                String other = getString(R.string.other);
+                String text = getString(R.string.the_chosen_color_is) + setColor;
+
+                int col;
+
+                if (setColor == null)
+                    text = getString(R.string.the_chosen_color_is_no_data);
+                if (setColor.equals(red))
+                    col = R.color.red;
+                else if (setColor.equals(green))
+                    col = R.color.green;
+                else if (setColor.equals(yellow))
+                    col = R.color.yellow;
+                else
+                    col = R.color.black;
+
+                txt.setTextColor(ContextCompat.getColor(requireContext(),col));
+                txt.setText(text);
+
+
+            }
+        });
+
+        return view;
+
     }
+
 }

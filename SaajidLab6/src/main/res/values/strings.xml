@@ -8,4 +8,9 @@
     <string name="red">Red</string>
     <string name="other">Other</string>
     <string name="saajid_aziz">Saajid Aziz</string>
+    <string name="select_a_colour">Select a colour</string>
+    <string name="tab">"Tab "</string>
+    <string name="the_selected_color_is_no_data">The selected color is: NO DATA</string>
+    <string name="the_chosen_color_is">"The chosen color is: "</string>
+    <string name="the_chosen_color_is_no_data">The chosen color is: NO DATA</string>
 </resources>
