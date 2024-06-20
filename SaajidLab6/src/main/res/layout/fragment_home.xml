@@ -46,10 +46,11 @@
 
     <Button
         android:id="@+id/SaajidSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="88dp"
+        android:background="#006DC3"
         android:text="@string/submit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -77,6 +78,8 @@
         android:layout_marginEnd="168dp"
         android:layout_marginBottom="36dp"
         android:text="@string/saajid_aziz"
+        android:textColor="#FF0303"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/SaajidDiv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
