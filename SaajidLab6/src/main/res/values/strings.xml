@@ -2,4 +2,10 @@
 <!--  Saajid Aziz n01555756   -->
     <string name="app_name">TabsLayout</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="green">Green</string>
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
+    <string name="other">Other</string>
+    <string name="saajid_aziz">Saajid Aziz</string>
 </resources>
